@@ -1,0 +1,97 @@
+#enlace {
+  background-color: #F7E4E3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#enlace img {
+  width: 3rem;
+}
+
+.izquierda {
+  flex-direction: row-reverse;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.derecha {
+  border-radius: 0 1rem 1rem 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #7a4d4c;
+}
+
+body {
+  background-color: #BF0606;
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #F7E4E3;
+  position: relative;
+  padding: 1rem 0 0 0;
+  margin: 0 0 5rem 0;
+}
+header img {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section {
+  position: relative;
+  text-align: center;
+}
+section h1 {
+  color: #F7E4E3;
+  font-size: 1.6rem;
+}
+section .enlaces {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 2rem);
+  width: 100%;
+  margin: 2rem 0 0 0;
+}
+section .enlaces a {
+  text-decoration: none;
+}
+section .enlaces .linkedin {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+section .enlaces .github {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+section .enlaces .instagram {
+  grid-row: 3/5;
+  grid-column: 1/2;
+}
+section .enlaces .twitter {
+  grid-row: 4/6;
+  grid-column: 2/3;
+}
+section .enlaces .youtube {
+  grid-row: 5/7;
+  grid-column: 1/2;
+}
+section .enlaces .spotify {
+  grid-row: 6/8;
+  grid-column: 2/3;
+}
+
+/*# sourceMappingURL=style.css.map */
