@@ -1,3 +1,21 @@
+header {
+    width: 100%;
+    height: 6.5rem;
+    background-color: #F7E4E3;
+    position: relative;
+    padding: 1rem 0 0 0;
+    margin: 0 0 5rem 0;
+
+    img {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 0px 30px 10px #7a4d4c;
+    }
+}
 #enlace {
     background-color: #F7E4E3;
     display: flex;
@@ -11,13 +29,8 @@
     img {
         width: 3rem;
     }
-}
 
-.izquierda {
-    flex-direction: row-reverse;
-    border-radius: 1rem 0 0 1rem;
-}
-
-.derecha {
-    border-radius: 0 1rem 1rem 0;
+    &:hover {
+        background-color: lighten($color: #BF0606, $amount: 30%);
+    }
 }
