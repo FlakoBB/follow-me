@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GitHub",
+    "link": "https://github.com/FlakoBB",
+    "icon": "GithubIcon"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/josephryanbb/",
+    "icon": "LinkedInIcon"
+  },
+  {
+    "name": "Instagram",
+    "link": "https://www.instagram.com/flako_jrbb",
+    "icon": "InstagramIcon"
+  },
+  {
+    "name": "X (Twitter)",
+    "link": "https://x.com/Flako_BB",
+    "icon": "XTwitterIcon"
+  },
+  {
+    "name": "YouTube",
+    "link": "https://www.youtube.com/@flakobb",
+    "icon": "YouTubeIcon"
+  },
+  {
+    "name": "Spotify",
+    "link": "https://open.spotify.com/user/227ndh6exnwz4xu4i2guf7dzi?si=6d3a84c34e0e48d0",
+    "icon": "SpotifyIcon"
+  }
+]

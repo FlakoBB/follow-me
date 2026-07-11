@@ -1,0 +1,32 @@
+@use 'colors' as c;
+@use 'sass:color' as color;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  color: c.$secondary;
+}
+
+html,
+body {
+  background-color: c.$tertiary;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: c.$primary;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+::selection {
+  color: c.$secondary;
+  background-color: color.adjust(c.$primary, $alpha: -.5);
+}

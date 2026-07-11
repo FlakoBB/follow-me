@@ -1,0 +1,128 @@
+@use 'colors' as c;
+@use 'sass:color' as color;
+
+.main {
+  padding-inline: 1rem;
+  max-width: 645px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2rem;
+
+  .header {
+    padding-block: 1rem;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .user-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+
+    .user-photo {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 6rem;
+      overflow: hidden;
+      border: 2px solid c.$primary;
+      padding: .25rem;
+      align-self: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .user-name {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .user-description {
+      font-size: 1.1rem;
+      color: c.$neutral;
+      max-width: 30rem;
+      text-align: center;
+      text-wrap: pretty;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    .social-link {
+      background-color: color.scale(c.$neutral, $lightness: 80%);
+      padding: .6rem 1.5rem;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transform: translateY(0);
+      transition: all 200ms;
+      text-decoration: none;
+
+      span {
+        color: inherit;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .arrow {
+        stroke: c.$tertiary;
+        opacity: 0;
+        transition: opacity 300ms;
+        width: 24px;
+        height: 24px;
+      }
+
+      .linkIcon {
+        fill: c.$secondary;
+        opacity: 1;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background-color: c.$primary;
+        color: c.$tertiary;
+        transform: translateY(-4px);
+        box-shadow: 0 4px 10px 0 color.adjust(c.$secondary, $alpha: -.5);
+
+        .arrow {
+          opacity: 1;
+        }
+
+        .linkIcon {
+          fill: c.$tertiary;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    .copyright {
+      font-size: .8rem;
+      color: c.$neutral;
+    }
+  }
+}
