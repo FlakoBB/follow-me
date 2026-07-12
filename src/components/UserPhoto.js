@@ -1,4 +1,4 @@
-import photo from '../assets/images/user-photo.jpg'
+import photo from '../assets/images/user-photo.webp'
 
 export const UserPhoto = () => {
   return `
