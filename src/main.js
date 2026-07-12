@@ -1,4 +1,5 @@
 import { svgIcons } from './assets/icons/svg-icons'
+import { ShareBtn } from './components/ShareBtn'
 import { SocialLink } from './components/SocialLink'
 import { UserPhoto } from './components/UserPhoto'
 import linksData from './data/links.json'
@@ -21,6 +22,7 @@ document.querySelector('#app').innerHTML = `
   <section class="main">
     <header class="header">
       <p class="title">FollowMe</p>
+      ${ShareBtn()}
     </header>
     <div class="user-data">
       ${UserPhoto()}
@@ -34,3 +36,17 @@ document.querySelector('#app').innerHTML = `
       <p class="copyright">FollowMe &copy;
   </section>
 `
+
+const shareBtnRef = document.querySelector('#share-btn')
+
+shareBtnRef.addEventListener('click', async () => {
+  if (navigator.share) {
+    await navigator.share({
+      title: document.title,
+      url: window.location.href
+    })
+  } else {
+    await navigator.clipboard.writeText(window.location.href)
+    window.alert('Enlace copiado al portapapeles.')
+  }
+})

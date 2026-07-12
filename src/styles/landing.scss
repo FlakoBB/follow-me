@@ -13,10 +13,38 @@
 
   .header {
     padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 
     .title {
       font-size: 1.5rem;
       font-weight: 700;
+    }
+
+    #share-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      padding: 0.5rem 0.6rem 0.5rem 0.5rem;
+      background-color: transparent;
+      border: none;
+      transition: background-color 300ms;
+      cursor: pointer;
+
+      svg {
+        fill: c.$primary;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        background-color: color.adjust(c.$primary, $alpha: -.9);
+      }
     }
   }
 
